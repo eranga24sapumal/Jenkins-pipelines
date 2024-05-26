@@ -8,14 +8,14 @@ pipeline {
             }
         }
         
-        stage('List Files') {
-            steps {
-                // List files in the workspace
-                echo 'Listing files in the workspace...'
-                sh 'pwd'
-                sh 'ls -la'
-            }
-        }
+        // stage('List Files') {
+        //     steps {
+        //         // List files in the workspace
+        //         echo 'Listing files in the workspace...'
+        //         sh 'pwd'
+        //         sh 'ls -la'
+        //     }
+        // }
 
         stage('Build') {
             steps {
