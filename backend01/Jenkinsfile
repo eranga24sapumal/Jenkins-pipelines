@@ -19,15 +19,16 @@ pipeline {
             steps {
                 echo 'Testing Backend 1...'
                 // Add your test steps here
-                  }
+            }
         }
+
         stage('List Files') {
             steps {
                 // List files in the workspace
-                echo "folder"
-                sh "pwd"
+                echo 'Listing files in the workspace...'
+                sh 'pwd'
                 sh 'ls -la'
             }
         }
-}
+    }
 }
