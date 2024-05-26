@@ -7,6 +7,15 @@ pipeline {
                 git url: 'https://github.com/eranga24sapumal/msdocs-python-flask-webapp-quickstart.git', branch: 'main'
             }
         }
+        
+        stage('List Files') {
+            steps {
+                // List files in the workspace
+                echo 'Listing files in the workspace...'
+                sh 'pwd'
+                sh 'ls -la'
+            }
+        }
 
         stage('Build') {
             steps {
@@ -19,15 +28,6 @@ pipeline {
             steps {
                 echo 'Testing Backend 1...'
                 // Add your test steps here
-            }
-        }
-
-        stage('List Files') {
-            steps {
-                // List files in the workspace
-                echo 'Listing files in the workspace...'
-                sh 'pwd'
-                sh 'ls -la'
             }
         }
     }
